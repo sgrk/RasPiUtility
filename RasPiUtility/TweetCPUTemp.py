@@ -11,6 +11,15 @@ def get_CPU_Temp():
     return temp
 if __name__ == "__main__":
     time = datetime.now().strftime('%H:%M:%S')
-    temp=str(get_CPU_Temp())
+    temp=str(get_CPU_Temp())   
     txt="raspberry pi CPU temp:{0}°C({1})".format(temp,time)
-    print(txt)
+ 
+    consumer_key    = "[Consumer Key]"
+    consumer_secret = "[Consumer Secret]"
+    access_token    = "[Access Token]"
+    access_secret   = "[Access Token Secret]"
+ 
+    twitter = Twitter(auth=OAuth(
+    access_token, access_secret, consumer_key, consumer_secret)
+    )
+    twi.statuses.update(status=txt)
