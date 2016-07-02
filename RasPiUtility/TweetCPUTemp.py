@@ -3,7 +3,7 @@
 from twitter import *
 from datetime import datetime
 
-def get_CPU_Temp(self):
+def get_CPU_Temp():
     f = open("/sys/class/thermal/thermal_zone0/temp","r")
     temp=int(f.read())
     f.close()
