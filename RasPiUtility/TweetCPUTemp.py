@@ -22,4 +22,4 @@ if __name__ == "__main__":
     twitter = Twitter(auth=OAuth(
     access_token, access_secret, consumer_key, consumer_secret)
     )
-    twi.statuses.update(status=txt)
+    twitter.statuses.update(status=txt)
